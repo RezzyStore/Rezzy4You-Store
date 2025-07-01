@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sc Bot Free - Plankton4You.Dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #00ffff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-image: linear-gradient(#000000cc, #000000cc), url('https://www.transparenttextures.com/patterns/cubes.png');
+      background-size: cover;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff00cc;
+    }
+
+    .sc-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .sc-card {
+      background-color: #111;
+      border: 2px solid #00ffff;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      box-shadow: 0 0 10px #00ffff55;
+    }
+
+    .sc-name {
+      font-size: 16px;
+    }
+
+    .download-btn {
+      padding: 8px 14px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background-color: #00cccc;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+      text-decoration: none;
+      color: #00ffff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sc Bot Free Download</h1>
+
+  <div class="sc-list" id="scriptContainer"></div>
+
+  <a href="index.html" class="back-btn">← Kembali ke Dashboard</a>
+
+  <script>
+    const scripts = [
+      { name: 'SCRIPT BOT MD WA NO ENC', url: 'https://www.mediafire.com/file/je75s7i787inh2f/Sc-Md-ByMalzhost-NoEnc.zip/file' },
+      { name: 'SCRIPT BASE MD BOT WA NO ENC', url: 'https://www.mediafire.com/file/jm2hjtrub85fpmh/Base-BotWA-NoENC.zip/file' },
+      { name: 'SC CPANEL SIMPLE', url: 'https://www.mediafire.com/file/mis6m62tjettnlx/CPANEL+SIMPEL.zip/file' },
+      { name: 'KUMPULAN SC DDOS', url: 'https://www.mediafire.com/file/lmk6e0cpd5bnmcs/DDOS+ARCHIVE.zip/file' },
+      { name: 'SC BUG NIKA V9', url: 'https://www.mediafire.com/file/95m0rr0sbjsedpe/NIKA+V9.2+NEW+[+NO+ENC+BY+ANONIM].zip/file' },
+      { name: 'KYOKI MD [NO ENC]', url: 'https://www.mediafire.com/file/fu33zksqzcop4ei/KYOKI+MD+NO+ENC.zip/file' },
+      { name: 'SC REXUZ11', url: 'https://www.mediafire.com/file/kgyw7yrp1y8pwt2/Rayzz_Need_Cewe_%2540Rexxuz11.zip/file' },
+      { name: 'NAKANO ITSUKI - AI V2', url: 'https://www.mediafire.com/file/gxk7wd9vglfbuhe/Itsuki_-AI_V2.zip/file' },
+      { name: 'APK TOOLS ALL FITUR', url: 'https://ewww.mediafire.com/file/51sgk0s2jgrybyv/Tools+X+PlankDev+V1.apk/file' },
+      { name: 'SC CPANEL & PUSHKONT', url: 'https://www.mediafire.com/file/1m2kzcz7gndhrwq/Levi_Botz_New_Version.zip/file' },
+      { name: 'SC FURINA MD V2 NO ENC', url: 'https://www.mediafire.com/file/8bgofihs8du3n82/FURINA_MD_V2_%255B_FIX_%255D.gz/file' },
+      { name: 'KORPS GOZZ CRASH', url: 'https://www.mediafire.com/file/5bxgxultabq7m9o/西𝙎𝘾𝙍𝙄𝙋𝙏+𝙆𝙊𝙍𝙋𝙎+𝙂𝙊𝙕𝙕起.zip/file' },
+      { name: 'KUROGANE CRASHER', url: 'https://www.mediafire.com/file/n1ep4oh8oyyatnp/KuroganeCrasher.zip/file' },
+      { name: 'PARK INVISION V1.0', url: 'https://www.mediafire.com/file/qzhi3qbeezgj9je/PARK_INVISION_V1.0.zip/file' },
+      { name: 'QUANTUM X V1.0.0', url: 'https://www.mediafire.com/file/lmgee9n4gw4lnoo/QuantumX_V1.0.0.zip/file' },
+      { name: 'TOOLS ALL FITUR UP PLANKDEV', url: 'https://www.mediafire.com/file/51sgk0s2jgrybyv/Tools+X+PlankDev+V1.apk/file' },
+      { name: 'ZORO 6.1 PRO [NO ENC]', url: 'https://www.mediafire.com/file/o3ov9hdhn1c4tc2/ZORO_6.1%25E2%2580%2594PRO_%255B_NO_ENC_%255D.zip/file' },
+      { name: 'TRCRSHER V1 MIKA', url: 'https://www.mediafire.com/file/05exo2mlkrs97ys/trcrsher+V1+Mika.zip/file' },
+      { name: 'X-WZXTEAM V2 GEN 1 ENC', url: 'https://www.mediafire.com/file/aa2ttx8cpcb1r26/𝐗-𝐖𝐙𝐗𝐓𝐄𝐀𝐌+𝐕𝟐+𝐆𝐄𝐍+𝟏++𝐄𝐍𝐂.zip/file' },
+      { name: 'Base-botwa-new', url: 'https://www.mediafire.com/file/rpor0xh5vkqlwop/Base-botwa-new.zip/file' },
+      { name: 'DeftonesX V1 ENC', url: 'https://www.mediafire.com/file/b72gyak13jakcgw/𝙳𝚎𝚏𝚝𝚘𝚗𝚎𝚜𝚇+𝚅𝟷+𝙴𝙽𝙲.zip/file' }
+    ];
+
+    const container = document.getElementById('scriptContainer');
+
+    scripts.forEach(script => {
+      const card = document.createElement('div');
+      card.className = 'sc-card';
+      card.innerHTML = `
+        <div class="sc-name">${script.name}</div>
+        <a class="download-btn" href="${script.url}" target="_blank">Download</a>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
